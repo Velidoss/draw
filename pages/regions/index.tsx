@@ -23,9 +23,17 @@ const regions = [
 
 const Regions = () => {
   return (
-    <div><div>Regions</div><div>{regions.map((region) => (
-      <Link href={region.href}>{region.name}</Link>
-    ))}</div></div>
+    <div>
+      <div>Regions</div>
+      <div>
+        {regions.map((region) => (
+          <Link key={region.id} href={region.href}>{region.name}</Link>
+        ))}
+      </div>
+      <h1 className="text-3xl font-bold underline decoration-sky-500">
+        Hello world!
+      </h1>
+    </div>
   )
 };
 
