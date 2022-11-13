@@ -1,3 +1,4 @@
+import { Provider } from "jotai";
 import { Component, FC, ReactNode } from "react";
 import {Layout} from "../components/Layout";
 import '../styles/global.css';
@@ -9,8 +10,11 @@ type Props = {
 
 export default function MyApp({ Component, pageProps }: Props) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Provider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </Provider>
+
   )
 }

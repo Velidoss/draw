@@ -15,6 +15,12 @@ module.exports = {
         iris: '#4C4CCB',
         ivory: '#FAF9EB',
         orange: '#F4B942',
+        notify: 'linear-gradient(90deg, hsla(238, 100%, 71%, 1) 0%, hsla(295, 100%, 84%, 1) 100%)',
+        violet: '#696eff',
+        pink: '#f8acff'
+      },
+      minWidth: {
+        '250': '250px'
       }
     },
   },
