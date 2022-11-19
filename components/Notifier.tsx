@@ -1,13 +1,15 @@
 import { Transition } from "@headlessui/react";
-import { useAtom } from "jotai";
-import { notificationOpenAtom } from "../store/globals";
+import { FC } from "react";
 
-export const Notifier = () => {
-  const [notifyOpen] = useAtom(notificationOpenAtom);
+type Props = {
+  show: boolean;
+}
+
+export const Notifier: FC<Props> = ({show}) => {
 
   return (
       <Transition 
-        show={notifyOpen} 
+        show={show} 
         className="cursor-pointer" 
         enter="transition ease-in-out duration-1000 transform"
         enterFrom="-translate-x-10 opacity-0"
